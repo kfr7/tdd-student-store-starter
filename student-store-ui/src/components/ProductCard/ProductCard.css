@@ -1,0 +1,9 @@
+.product-grid .product-card {
+    height: 350px;
+    width: 250px;
+    background: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--border-color);
+    max-width: 800px;
+}
