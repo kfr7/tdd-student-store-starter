@@ -2,7 +2,8 @@ import * as React from "react"
 import "./ProductGrid.css"
 import ProductCard from "../ProductCard/ProductCard"
 
-export default function ProductGrid({products, handleAddItemToCart, handleRemoveItemToCart, shoppingCart}) {
+export default function ProductGrid({products, handleAddItemToCart, 
+                                      handleRemoveItemToCart, shoppingCart}) {
 
   const returnQuantityInCart = (productId) => {
     let numberToReturn = 0;

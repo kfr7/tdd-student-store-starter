@@ -13,7 +13,7 @@ export default function ProductView({ product, productId, quantity, handleAddIte
         <h1 className="product-id">
             Product #{productId}
         </h1>
-        <div className="product-view-card">
+        <div className="product-view-card" >
             <ProductCard product={product} productId={productId} quantity={quantity}
             handleAddItemToCart={handleAddItemToCart}
             handleRemoveItemToCart={handleRemoveItemToCart}

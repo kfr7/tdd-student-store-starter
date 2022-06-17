@@ -5,7 +5,11 @@ import axios from "axios"
 import ProductView from "../ProductView/ProductView"
 
 
-export default function ProductDetail({handleAddItemToCart, handleRemoveItemToCart, products, shoppingCart, setError, setIsFetching, isFetching}) {
+export default function ProductDetail({handleAddItemToCart, 
+            handleRemoveItemToCart, 
+            products, shoppingCart, 
+            setError, setIsFetching, 
+            isFetching}) {
     let {productId} = useParams();
     const [product, setProduct] = React.useState({
 		"id": -1,

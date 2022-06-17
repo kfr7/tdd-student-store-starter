@@ -14,7 +14,11 @@ export default function Sidebar({ isOpen, shoppingCart,
       </div>
       <ShoppingCart isOpen={isOpen} 
                     products={products} 
-                    shoppingCart={shoppingCart} />
+                    shoppingCart={shoppingCart} 
+                    checkoutForm={checkoutForm}
+                    handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+                    handleOnSubmitCheckoutFormChange={handleOnSubmitCheckoutForm}
+                    />
     </section>
   )
 }

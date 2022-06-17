@@ -1,8 +1,16 @@
 import * as React from "react"
 import "./ShoppingCart.css"
+import CheckoutForm from "../CheckoutForm/CheckoutForm"
 
-
-export default function ShoppingCart ({ isOpen, products, shoppingCart }) {
+//                                 checkoutForm={checkoutForm}
+//                                 handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+//                                 handleOnSubmitCheckoutFormChange={handleOnSubmitCheckoutFormChange}
+//                                 // 
+export default function ShoppingCart ({ isOpen, products, 
+                                    shoppingCart,
+                                    checkoutForm,
+                                    handleOnCheckoutFormChange,
+                                    handleOnSubmitCheckoutFormChange }) {
 
     const findAndReturnName = (productId) => {
         let itemName = ""
@@ -35,7 +43,7 @@ export default function ShoppingCart ({ isOpen, products, shoppingCart }) {
     }
 
     const calculateTaxesAndFees = () => {
-        return 0.08 * calculateSubtotal()
+        return 0.0875 * calculateSubtotal()
     }
 
     return (
@@ -44,7 +52,7 @@ export default function ShoppingCart ({ isOpen, products, shoppingCart }) {
                 <h3>
                     Shopping Cart
                 </h3>
-                {shoppingCart.length === 0 ? <p>No items in cart. You didn't find anything you like at all?</p> : null}
+                {shoppingCart.length === 0 ? <p className="notification">No items added to cart yet. Start shopping now!</p> : null}
                 <div className={`CartTable ${shoppingCart.length === 0 ? "closed" : ""}`}>
                     <div className="header">
                         <div className="header-row">
@@ -81,49 +89,12 @@ export default function ShoppingCart ({ isOpen, products, shoppingCart }) {
                     </div>
 
                 </div>
-                <div className="checkout-form">
-                    <h3>
-                        Payment Info
-                        <span className="button">
-                            <i className="material-icons md-48">monetization_on</i>
-                        </span>
-                    </h3>
-                    <div className="input-field">
-                        <label className="label">Name</label>
-                        <div className="control">
-                            <input name="name"
-                            className="checkout-form-input"
-                            type="text" placeholder="Name" />
-                        </div>
-                    </div>
-                    <div className="input-field">
-                        <label className="label">Email</label>
-                        <div className="control">
-                            <input name="email"
-                            className="checkout-form-input"
-                            type="email"
-                            placeholder="username@domainname.com" />
-                        </div>
-                    </div>
-                    <div className="field">
-                        <div className="control">
-                            <label className="checkbox">
-                                <input name="termsAndConditions" type="checkbox" />
-                                <span className="label">
-                                    "I agree to the 
-                                    <a id="termsAndConditions" href="#terms-and-conditions"> terms and conditions</a>
-                                    "
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                    <p className="is-danger" />
-                    <div className="field">
-                        <div className="control">
-                            <button className="button checkout-button">Checkout</button>
-                        </div>
-                    </div>
-                </div>
+                <CheckoutForm   isOpen={isOpen}
+                                shoppingCart={shoppingCart}
+                                checkoutForm={checkoutForm}
+                                handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+                                handleOnSubmitCheckoutFormChange={handleOnSubmitCheckoutFormChange}
+                                />
             </div>
         </div>
     )

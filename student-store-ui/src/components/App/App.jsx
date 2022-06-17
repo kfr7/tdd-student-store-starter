@@ -120,15 +120,17 @@ export default function App() {
   }
 
   // check what POST is supposed to have as params before confirming if right or not
-  const handleOnCheckoutFormChange = (name, value) => {
-    let newObject = {name: name, value: value}
-    setCheckoutForm(newObject);
+  const handleOnCheckoutFormChange = (event) => {
+    console.log(event.target.name, event.target.value)
+    // LEFT OFF HERE
+    // let newObject = {name: name, value: value}
+    setCheckoutForm({...checkoutForm, [event.target.name]: event.target.value});
   }
 
   // test alongside with above function
   const handleOnSubmitCheckoutForm = () => {
     axios.post("https://codepath-store-api.herokuapp.com/store",
-    {user: {name: checkoutForm.name, email: checkoutForm.value}, shoppingCart: shoppingCart})
+    {user: {name: checkoutForm.name, email: checkoutForm.email}, shoppingCart: shoppingCart})
     .then((response) => {
       console.log(response);
     }, reason => {
