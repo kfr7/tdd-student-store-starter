@@ -4,9 +4,16 @@ import "./CheckoutForm.css"
 export default function CheckoutForm ({ isOpen, shoppingCart, 
                                         checkoutForm, 
                                         handleOnCheckoutFormChange, 
-                                        handleOnSubmitCheckoutForm }) {
+                                        handleOnSubmitCheckoutForm,
+                                        findAndReturnName,
+                                        findAndReturnUnitPrice,
+                                        calculateSubtotal,
+                                        calculateTaxesAndFees,
+                                        receiptState }) {
+    
 
-    return (
+                                        
+    return (<>
         <div className="checkout-form">
             <h3>
                 Payment Info
@@ -58,6 +65,50 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
             {/* NEED TO PUT TAG FOR ERROR className="error" */}
             {/* also need to do success */}
         </div>
+        <div className="checkout-success">
+            <h3>
+                "Checkout Info"
+                <span className="icon button">
+                    <i className="material-icons md-48">fact_check</i>
+                </span>
+            </h3>
+            {receiptState ? 
+            <div className="card">
+                <header className="card-head">
+                    <h4 className="card-title">Receipt</h4>
+                </header>
+                <section className="card-body">
+                    <p className="header">{`Showing receipt for 
+                    ${checkoutForm.name} available at ${checkoutForm.email}:`}</p>
+                    <ul className="purchase">
+                        {shoppingCart.map((itemBought, idx) => (
+                        <li key={idx}>
+                            {`${itemBought.quantity} total ${findAndReturnName(itemBought.itemId)} purcahsed
+                                at a cost of $${findAndReturnUnitPrice(itemBought.itemId).toFixed(2)}
+                                for a total cost of $${(findAndReturnUnitPrice(itemBought.itemId) *  itemBought.quantity).toFixed(2)}.`}
+                        </li>
+                        ))}
+                        <li>
+                            {`Before taxes, the subtotal was $${calculateSubtotal().toFixed(2)}`}
+                        </li>
+                        <li>
+                            {`After taxes and fees were applied, the total comes out to $${(calculateTaxesAndFees() + calculateSubtotal()).toFixed(2)}`}
+                        </li>
+                    </ul>
+                </section>
+            </div> :
+            <div className="content">
+                <p>
+                    A confirmation email will be sent to you so that you can confirm
+                    this order. Once you have confirmed the order, it will
+                    be delivered to your dorm room.
+                </p>
+            </div>
+            }
+            
+            
+        </div>
+        </>
              
     )
 }

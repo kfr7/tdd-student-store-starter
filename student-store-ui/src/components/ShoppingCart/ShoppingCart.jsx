@@ -10,7 +10,7 @@ export default function ShoppingCart ({ isOpen, products,
                                     shoppingCart,
                                     checkoutForm,
                                     handleOnCheckoutFormChange,
-                                    handleOnSubmitCheckoutFormChange }) {
+                                    handleOnSubmitCheckoutForm, receiptState }) {
 
     const findAndReturnName = (productId) => {
         let itemName = ""
@@ -93,8 +93,12 @@ export default function ShoppingCart ({ isOpen, products,
                                 shoppingCart={shoppingCart}
                                 checkoutForm={checkoutForm}
                                 handleOnCheckoutFormChange={handleOnCheckoutFormChange}
-                                handleOnSubmitCheckoutFormChange={handleOnSubmitCheckoutFormChange}
-                                />
+                                handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+                                findAndReturnName={findAndReturnName}
+                                findAndReturnUnitPrice={findAndReturnUnitPrice}
+                                calculateSubtotal={calculateSubtotal}
+                                calculateTaxesAndFees={calculateTaxesAndFees}
+                                receiptState={receiptState}/>
             </div>
         </div>
     )

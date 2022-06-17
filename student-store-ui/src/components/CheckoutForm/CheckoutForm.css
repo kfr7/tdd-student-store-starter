@@ -127,3 +127,54 @@ input {
 .checkout-form button:active {
     transform: translateY(1px);
 }
+
+.checkout-success {
+    width: 100%;
+    padding: 1rem;
+}
+
+.checkout-success>h3 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-success>h3>span {
+    margin-left: 10px;
+}
+
+.checkout-success p {
+    color: #fff;
+}
+
+.checkout-success .card {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: block;
+}
+
+.checkout-success .card .card-title {
+    color: #fff;
+    font-weight: 20px;
+    margin-bottom: 5px;
+}
+
+checkout-success .purchase {
+    padding-left: 20px;
+}
+
+.checkout-success .purchase li {
+    color: #fff;
+}
+
+a, span, div, p, h1, h2, h3, h4, h5, h6, ul, ol {
+    margin: 0;
+    padding: 0;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    color: var(--font-dark);
+}

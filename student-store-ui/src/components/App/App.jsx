@@ -19,10 +19,12 @@ export default function App() {
   // each object in shopping cart should have two fields: itemId, quantity
   const [shoppingCart, setShoppingCart] = React.useState([]);
   // look up what we need to send to the POST message
-  const [checkoutForm, setCheckoutForm] = React.useState();
+  const [checkoutForm, setCheckoutForm] = React.useState({name: "", email: ""});
 
   const [categorySelected, setCategorySelected] = React.useState("All Categories")
   const [searchFieldValue, setSearchFieldValue] = React.useState("")
+
+  const [receiptState, setReceiptState] = React.useState(false);
   // SOMETHING LIKE THIS TO ONLY SHOW MATCHING SEARCH
   const currentMerchandiseFromSearch = products.filter((product) => {
     try{
@@ -122,30 +124,25 @@ export default function App() {
   // check what POST is supposed to have as params before confirming if right or not
   const handleOnCheckoutFormChange = (event) => {
     console.log(event.target.name, event.target.value)
-    // LEFT OFF HERE
-    // let newObject = {name: name, value: value}
     setCheckoutForm({...checkoutForm, [event.target.name]: event.target.value});
   }
 
   // test alongside with above function
   const handleOnSubmitCheckoutForm = () => {
+    console.log("Checkout Button / POST request");
     axios.post("https://codepath-store-api.herokuapp.com/store",
     {user: {name: checkoutForm.name, email: checkoutForm.email}, shoppingCart: shoppingCart})
     .then((response) => {
+      setReceiptState(true);
+      setShoppingCart([]);
+      setCheckoutForm({name: "", email: ""})
       console.log(response);
+      
     }, reason => {
+      setReceiptState(false);
       setError(reason);
-      console.error(reason);
+      console.error(error);
     })
-    // axios.post("https://codepath-store-api.herokuapp.com/store",
-    // checkoutForm)
-    // .then((response) => {
-    //   console.log(response);
-    // }, reason => {
-    //   setError(reason);
-    //   console.error(reason);
-    // })
-    
   }
 
   return (
@@ -159,7 +156,9 @@ export default function App() {
                     checkoutForm={checkoutForm}
                     handleOnCheckoutFormChange={handleOnCheckoutFormChange}
                     handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
-                    handleOnToggle={handleOnToggle}/>
+                    handleOnToggle={handleOnToggle}
+                    receiptState={receiptState}
+                    />
           <Routes>
             
 

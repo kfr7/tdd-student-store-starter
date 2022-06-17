@@ -19,7 +19,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [x] User can click the '-' button on a product cart to decrement that product in the shopping cart.
 - [x] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
-- [ ] User can check out, and can view receipt upon completion.
+- [x] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
@@ -77,12 +77,12 @@ The following specifications were met on the Express backend and the React front
         - [x] If it doesn't exist, the function should do nothing.
         - [x] If the new quantity is `0`, it should remove the item from the `shoppingCart`
       - [x] The **`handleOnCheckoutFormChange`** function. When called...
-        - [ ] It should receive two arguments:
-          - [ ] `name` - the `name` attribute of the input being updated
-          - [ ] `value` - the new value to set for that input
+        - [x] It should receive two arguments:
+          - [x] `name` - the `name` attribute of the input being updated
+          - [x] `value` - the new value to set for that input
         - [x] It should update the `checkoutForm` object with the new value from the correct input(s)
       - [x] The **`handleOnSubmitCheckoutForm`** function. When called...
-        - [ ] It should submit the user's order to the API
+        - [x] It should submit the user's order to the API
         - [x] To submit the user's order, it should leverage the `axios.post` method to send a `POST` request to the `/store` endpoint.
         - [x] The body of that `POST` request should be an object with two fields:
           - [x] The `user` field:
@@ -238,8 +238,8 @@ The following specifications were met on the Express backend and the React front
       - [ ] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
       - [ ] If the `POST` request is successful...
         - [ ] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
-        - [ ] The `shoppingCart` should be emptied
-        - [ ] The `checkoutForm` should be reset to its default state.
+        - [x] The `shoppingCart` should be emptied
+        - [x] The `checkoutForm` should be reset to its default state.
 
 **Server** - Create an Express server
   - [ ] Wire up the appropriate middleware and error handlers in the `app.js` file
