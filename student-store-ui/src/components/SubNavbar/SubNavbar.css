@@ -58,7 +58,8 @@ nav {
 .sub-navbar .content .search-bar i {
     height: 40px;
     width: 40px;
-    background: var(--bright-green);
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     color: #fff;
     fill: #fff;
     display: flex;
@@ -103,7 +104,8 @@ nav {
 
 .sub-navbar .content .cart {
     color: var(--pure-white);
-    background: var(--bright-green);
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     width: 170px;
     height: 40px;
     display: flex;
@@ -113,7 +115,7 @@ nav {
 }
 
 .cart a {
-    color: var(--pure-white);
+    color: #60656C;
     margin: 0 5px;
 }
 
@@ -150,6 +152,10 @@ a, span, div, p, h1, h2, h3, h4, h5, h6, ul, ol {
     transition: all .2s ease;
 }
 
+.sub-navbar .category-menu.closed {
+    opacity: 0;
+}
+
 
 li {
     display: list-item;
@@ -157,7 +163,7 @@ li {
 }
 
 .sub-navbar .category-menu li.is-active button {
-    border-bottom: solid 2px var(--bright-green);
+    border-bottom: solid 2px black;
 }
 .sub-navbar .category-menu li button {
     cursor: pointer;

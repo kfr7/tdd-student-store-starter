@@ -5,7 +5,8 @@
 .navbar {
     width: 100%;
     max-width: 100vw;
-    background: var(--dark-blue);
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     color: var(--pure-white);
     height: 70px;
     display: flex;

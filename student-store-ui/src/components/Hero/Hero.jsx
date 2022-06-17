@@ -7,13 +7,13 @@ export default function Hero({products, handleAddItemToCart, handleRemoveItemToC
         <div className="content">
             <div className="intro">
                 <h1>Welcome!</h1>
-                <h1>Find Your Merch!</h1>
+                <h1>Find what you like, easily.</h1>
                 <p>
-                    We have all kinds of goodies. Click on any of the items to start filling up your shopping cart. Checkout whenever you're ready.
+                    Look for things you like to start filling up your shopping cart. Checkout whenever you're ready.
                 </p>
             </div>
             <div className="media">
-                <img className="hero-img" src="https://codepath-student-store-demo.surge.sh/assets/student_store_icon.18e5d61a.svg" alt="hero" />
+                <img className="hero-img" src="https://www.pngmart.com/files/7/Buy-PNG-Photos.png" alt="hero" />
             </div>
         </div>
     </div>

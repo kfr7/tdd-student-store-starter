@@ -3,18 +3,28 @@ import "./Home.css"
 import Hero from "../Hero/Hero"
 import ProductGrid from "../ProductGrid/ProductGrid"
 import SubNavbar from "../SubNavbar/SubNavbar"
+import axios from "axios"
 
-export default function Home({products, handleAddItemToCart, handleRemoveItemToCart}) {
+
+
+export default function Home({products, 
+                              handleAddItemToCart, handleRemoveItemToCart, 
+                              shoppingCart, 
+                              setSearchFieldValue,  
+                              categorySelected, 
+                              setCategorySelected}) {
   // should render HERO.JSX and PRODUCTGRID.JSX
+
   return (
     <div className="home">
       <Hero />
-      <SubNavbar />
-      
-      
-      
+      <SubNavbar setSearchFieldValue={setSearchFieldValue} categorySelected={categorySelected} setCategorySelected={setCategorySelected} />
+    
       {/* PASS THROUGH products={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart} */}
-      <ProductGrid />
+      <ProductGrid products={products} 
+                    handleAddItemToCart={handleAddItemToCart} 
+                    handleRemoveItemToCart={handleRemoveItemToCart} 
+                    shoppingCart={shoppingCart} />
       <div className="about">
         <div className="content">
           <h3>About</h3>
@@ -26,7 +36,7 @@ export default function Home({products, handleAddItemToCart, handleRemoveItemToC
             </div>
             <div className="media">
               {/* src="/assets/giant_codepath.6952ef57.svg"       PUT THAT BELOW*/}
-              <img src="https://codepath-student-store-demo.surge.sh/assets/giant_codepath.6952ef57.svg" alt="codepath large" />
+              <img id="blackCodePathPng" src="https://info.codepath.org/hubfs/logo_codepath_whiteandgreen%20(1).png" alt="codepath large" />
             </div>
           </div>
         </div>

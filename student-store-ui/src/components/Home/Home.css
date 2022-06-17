@@ -53,7 +53,8 @@
   align-items: center;
   justify-content: center;
   height: 329px;
-  background: var(--dark-blue);
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 
 .about .content .summary .text p {
@@ -93,7 +94,8 @@
 .contact .content .summary {
   display: flex;
   flex-direction: row;
-  background: var(--dark-blue);
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   color: var(--pure-white);
   height: 330px;
   border: solid 1px #e0e0e0;
@@ -135,6 +137,9 @@
   width: 150px;
 }
 
+#blackCodePathPng {
+  width: 200px;
+}
 .contact .content .summary .media {
   display: flex;
   flex-direction: column;

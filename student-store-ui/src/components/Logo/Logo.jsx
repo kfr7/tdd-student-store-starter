@@ -1,15 +1,16 @@
 import * as React from "react"
 import "./Logo.css"
+import { Link } from "react-router-dom"
 
 export default function Logo() {
   return (
     <div className="logo">
-        <a href="/">
-            {/* THE CODE PATH LOGO IS NOT SHOWING UP */}
-            <img src="https://codepath-student-store-demo.surge.sh/assets/codepath.f1b3e41a.svg" alt="codepath logo"/>
-            {/* <img src="/assets/codepath.f1b3e41a.svg" alt="codepath logo"/> */}
-        </a>
+      <Link to={{pathname: "/"}}>
+        <img id="mainLogo" src={"https://www.pngmart.com/files/1/Shopping-Bag-Icon-PNG.png"} alt="codepath logo"/>
+      </Link>
+
     </div>
 
   )
 }
+
