@@ -44,7 +44,7 @@ The following specifications were met on the Express backend and the React front
     - [ ] `*` - anything else should render the `NotFound` component
   - [x] Renders the `Navbar` component on every route
   - [x] Renders the `Sidebar` component on every route
-  - [ ] Should create **at least** the following state variables:
+  - [x] Should create **at least** the following state variables:
     - [x] `products` - an array of product objects that is initially empty.
     - [x] `isFetching` - a boolean value representing whether or not the App is currently fetching the `products` from the API.
     - [x] `error` - a variable used to display a message when something goes wrong with the API requests.
@@ -85,7 +85,7 @@ The following specifications were met on the Express backend and the React front
         - [ ] It should submit the user's order to the API
         - [x] To submit the user's order, it should leverage the `axios.post` method to send a `POST` request to the `/store` endpoint.
         - [x] The body of that `POST` request should be an object with two fields:
-          - [ ] The `user` field:
+          - [x] The `user` field:
             - [x] Should be an object containing `name` and `email` properties
             - [x] Each property should be set to the correct value found in the `checkoutForm`
           - [x] The `shoppingCart` field:
