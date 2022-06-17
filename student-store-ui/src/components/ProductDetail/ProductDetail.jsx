@@ -21,6 +21,20 @@ export default function ProductDetail({handleAddItemToCart,
 		"price": 0
 	})
 
+  const withinProducts = (prodId) => {
+    const newList = products.filter((product) => {
+      return product.id === prodId;
+    })
+    if (newList.length === 0)
+    {
+      return false
+    }
+    else
+    {
+      return true
+    }
+  }  
+
     React.useEffect(() => {
         // maybe remove line below
         setError("");
@@ -55,6 +69,8 @@ export default function ProductDetail({handleAddItemToCart,
       }
 
   return (
+
+
     <div className="product-detail">
         {isFetching ? <h1 className="loading">Loading...</h1> : null}
         <ProductView product={product} 

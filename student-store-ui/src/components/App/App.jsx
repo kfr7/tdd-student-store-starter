@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import ProductDetail from "../ProductDetail/ProductDetail"
+import NotFound from "../NotFound/NotFound"
 import "./App.css"
 // Things I added below
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
@@ -184,7 +185,7 @@ export default function App() {
               {/* should render ProductDetail component here as well (above) */}
 
 
-            <Route path="*" element={<></>}/>
+            <Route path="*" element={<NotFound />}/>
               {/* should render NotFound component */}
             
           </Routes>
