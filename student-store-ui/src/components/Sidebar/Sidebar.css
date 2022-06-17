@@ -86,3 +86,7 @@ button {
     width: 40px;
 }
 
+#arrow:active {
+    transform: translateY(1px);
+}
+

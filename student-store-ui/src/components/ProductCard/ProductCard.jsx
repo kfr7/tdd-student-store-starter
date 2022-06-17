@@ -18,7 +18,7 @@ export default function ProductCard({ product, productId,
         <div className="product-info">
           <div className="main-info">
             <p className="product-name">{product.name}</p>
-            <p className="product-price">${product.price}</p>
+            <p className="product-price">${product.price.toFixed(2)}</p>
           </div>
 
           {showDescription ? 

@@ -1,5 +1,6 @@
 import * as React from "react"
 import "./Sidebar.css"
+import ShoppingCart from "../ShoppingCart/ShoppingCart"
 
 export default function Sidebar({ isOpen, shoppingCart,
       products, checkoutForm, handleOnCheckoutFormChange,
@@ -11,6 +12,9 @@ export default function Sidebar({ isOpen, shoppingCart,
           <img id="arrow" src="https://www.pngmart.com/files/3/Left-Arrow-Transparent-PNG.png"/>
         </button>
       </div>
+      <ShoppingCart isOpen={isOpen} 
+                    products={products} 
+                    shoppingCart={shoppingCart} />
     </section>
   )
 }

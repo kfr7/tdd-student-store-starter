@@ -25,7 +25,7 @@ export default function Home({products,
                     handleAddItemToCart={handleAddItemToCart} 
                     handleRemoveItemToCart={handleRemoveItemToCart} 
                     shoppingCart={shoppingCart} />
-      <div className="about">
+      <div className="about" id="About">
         <div className="content">
           <h3>About</h3>
           <div className="summary">
@@ -41,7 +41,7 @@ export default function Home({products,
           </div>
         </div>
       </div>
-      <div className="contact">
+      <div className="contact" id="Contact">
         <div className="content">
           <h3>Contact Us</h3>
           <div className="summary">
