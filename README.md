@@ -41,7 +41,7 @@ The following specifications were met on the Express backend and the React front
   - [x] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
     - [x] `/` - Should render the `Home.jsx` component
     - [x] `/products/:productId` - should render the `ProductDetail` component
-    - [ ] `*` - anything else should render the `NotFound` component
+    - [x] `*` - anything else should render the `NotFound` component
   - [x] Renders the `Navbar` component on every route
   - [x] Renders the `Sidebar` component on every route
   - [x] Should create **at least** the following state variables:
@@ -278,3 +278,28 @@ The following specifications were met on the Express backend and the React front
         - **optional**:
           - [ ] `receipt` - text describing the order (what might go on a receipt)
       - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+---
+
+### Reflection
+
+* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+
+The labs did prepare me to a certain extent in knowing how to use useState
+and how props get passed through components. However, what I was not prepared for
+and had to learn myself was the BrowserRouter, Routes, Route, and Link components. Although I now got it to work, there are still some parts I am not sure how to implement such as going to a specific fragment of the url using a Link component. I got it to work with an anchor tag but not Link. Also, not using axios or useEffect was another thing I had to learn on my own.
+
+* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+  
+I would have made it look more uniform without so many different boxes on the screen. Also, I would have watched more youtube videos on how advanced React works since I was having trouble sometimes.
+
+* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+
+I think I did well in my project demo, perhaps I can answer the questions while I show my demo though. Maybe I can show more expression too on what parts I was proud of.
+
+### Open-source libraries used
+
+- None.
+
+### Shout out
+
+I'd like to credit Abdullah and Duy since we all were working on the project at relatively the same pace so if one of us got stumped on a particular part, we usually resolved the issue pretty fast and got back on stable ground. 
