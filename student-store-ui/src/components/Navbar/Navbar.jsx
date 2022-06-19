@@ -2,6 +2,7 @@ import * as React from "react"
 import "./Navbar.css"
 import Logo from "../Logo/Logo"
 import { Link } from "react-router-dom"
+import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   return (

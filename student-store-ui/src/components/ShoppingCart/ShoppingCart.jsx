@@ -65,7 +65,7 @@ export default function ShoppingCart ({ isOpen, products,
                         <div key={idx} className="product-row">
                             <span className="flex-2 cart-product-name">{findAndReturnName(itemIdAndQ.itemId)}</span>
                             <span className="center cart-product-quantity">{itemIdAndQ.quantity}</span>
-                            <span className="center cart-product-price">{`$${findAndReturnUnitPrice(itemIdAndQ.itemId).toFixed()}`}</span>
+                            <span className="center cart-product-price">{`$${findAndReturnUnitPrice(itemIdAndQ.itemId).toFixed(2)}`}</span>
                             <span className="center cart-product-subtotal">{`$${(findAndReturnUnitPrice(itemIdAndQ.itemId) *  itemIdAndQ.quantity).toFixed(2)}`}</span>
                         </div>
                         ))}
