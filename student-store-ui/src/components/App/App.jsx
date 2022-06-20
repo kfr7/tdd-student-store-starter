@@ -25,7 +25,7 @@ export default function App() {
   const [categorySelected, setCategorySelected] = React.useState("All Categories")
   const [searchFieldValue, setSearchFieldValue] = React.useState("")
 
-  const [receiptState, setReceiptState] = React.useState(false);
+  const [receiptState, setReceiptState] = React.useState("default");
   // SOMETHING LIKE THIS TO ONLY SHOW MATCHING SEARCH
   const currentMerchandiseFromSearch = products.filter((product) => {
     try{
@@ -130,17 +130,26 @@ export default function App() {
 
   // test alongside with above function
   const handleOnSubmitCheckoutForm = () => {
-    console.log("Checkout Button / POST request");
+    if (shoppingCart.length === 0)
+    {
+      setReceiptState("error1")
+      return
+    }
+    else if (checkoutForm.name.length === 0 || checkoutForm.email.length === 0)
+    {
+      setReceiptState("error2")
+      return
+    }
     axios.post("https://codepath-store-api.herokuapp.com/store",
     {user: {name: checkoutForm.name, email: checkoutForm.email}, shoppingCart: shoppingCart})
     .then((response) => {
-      setReceiptState(true);
+      setReceiptState("success");
       setShoppingCart([]);
       setCheckoutForm({name: "", email: ""})
       console.log(response);
       
     }, reason => {
-      setReceiptState(false);
+      setReceiptState("unknown error");
       setError(reason);
       console.error(error);
     })
@@ -150,7 +159,6 @@ export default function App() {
     <div className="app">
       <BrowserRouter>
         <main>
-          {/* YOUR CODE HERE! */}
           <Navbar/>
           <Sidebar isOpen={isOpen} shoppingCart={shoppingCart}
                     products={products}
@@ -161,8 +169,6 @@ export default function App() {
                     receiptState={receiptState}
                     />
           <Routes>
-            
-
             <Route path="/" element={<Home  products={currentMerchandiseFromSearch} 
                                             handleAddItemToCart={handleAddItemToCart} 
                                             handleRemoveItemToCart={handleRemoveItemFromCart}
@@ -170,9 +176,6 @@ export default function App() {
                                             setSearchFieldValue={setSearchFieldValue}
                                             categorySelected={categorySelected}
                                             setCategorySelected={setCategorySelected} />}/>
-
-            
-
             <Route path="/products/:productId" element={<ProductDetail 
                                                           handleAddItemToCart={handleAddItemToCart}
                                                           handleRemoveItemToCart={handleRemoveItemFromCart}
@@ -183,32 +186,11 @@ export default function App() {
                                                           isFetching={isFetching}
                                                           />}/>
               {/* should render ProductDetail component here as well (above) */}
-
-
             <Route path="*" element={<NotFound />}/>
               {/* should render NotFound component */}
-            
           </Routes>
-          
-          
         </main>
       </BrowserRouter>
     </div>
   )
 }
-
-// DEFAULT TEMPLATE BELOW
-// export default function App() {
-//   return (
-//     <div className="app">
-//       <BrowserRouter>
-//         <main>
-//           {/* YOUR CODE HERE! */}
-//           <Navbar />
-//           <Sidebar />
-//           <Home />
-//         </main>
-//       </BrowserRouter>
-//     </div>
-//   )
-// }

@@ -3,7 +3,7 @@ import "./ProductDetail.css"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import ProductView from "../ProductView/ProductView"
-
+import NotFound from "../NotFound/NotFound"
 
 export default function ProductDetail({handleAddItemToCart, 
             handleRemoveItemToCart, 
@@ -27,11 +27,16 @@ export default function ProductDetail({handleAddItemToCart,
     })
     if (newList.length === 0)
     {
-      return false
+      return <NotFound />
     }
     else
     {
-      return true
+      return <ProductView product={product} 
+      productId={product.id} 
+      quantity={returnQuantityInCart(product.id)}
+      handleAddItemToCart={handleAddItemToCart}
+      handleRemoveItemToCart={handleRemoveItemToCart}
+      />
     }
   }  
 
@@ -70,15 +75,8 @@ export default function ProductDetail({handleAddItemToCart,
 
   return (
 
-
     <div className="product-detail">
-        {isFetching ? <h1 className="loading">Loading...</h1> : null}
-        <ProductView product={product} 
-        productId={product.id} 
-        quantity={returnQuantityInCart(product.id)}
-        handleAddItemToCart={handleAddItemToCart}
-        handleRemoveItemToCart={handleRemoveItemToCart}
-        />
+        {isFetching ? <h1 className="loading">Loading...</h1> : withinProducts(product.id)}
     </div>
   )
 }

@@ -19,7 +19,7 @@ export default function Navbar() {
           <li>
             <Link to={{pathname: "/"}}>
               Home
-              </Link>
+            </Link>
           </li>
           <li>
             <a href="/#About">About Us</a>

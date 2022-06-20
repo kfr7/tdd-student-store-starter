@@ -158,6 +158,9 @@ header {
     display: block;
 }
 
+.checkout-success .error {
+    color: red;
+}
 .checkout-success .card .card-title {
     color: #fff;
     font-weight: 20px;

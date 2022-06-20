@@ -11,7 +11,55 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                                         calculateTaxesAndFees,
                                         receiptState }) {
     
-
+    const displayMessage = () => {
+        if (receiptState === "success")
+        {   
+            return (<><p className="success">Success!</p>
+            <div className="card">
+                <header className="card-head">
+                    <h4 className="card-title">Receipt</h4>
+                </header>
+                <section className="card-body">
+                    <p className="header">{`Showing receipt for 
+                    ${checkoutForm.name} available at ${checkoutForm.email}:`}</p>
+                    <ul className="purchase">
+                        {shoppingCart.map((itemBought, idx) => (
+                        <li key={idx}>
+                            {`${itemBought.quantity} total ${findAndReturnName(itemBought.itemId)} purcahsed
+                                at a cost of $${findAndReturnUnitPrice(itemBought.itemId).toFixed(2)}
+                                for a total cost of $${(findAndReturnUnitPrice(itemBought.itemId) *  itemBought.quantity).toFixed(2)}.`}
+                        </li>
+                        ))}
+                        <li>
+                            {`Before taxes, the subtotal was $${calculateSubtotal().toFixed(2)}`}
+                        </li>
+                        <li>
+                            {`After taxes and fees were applied, the total comes out to $${(calculateTaxesAndFees() + calculateSubtotal()).toFixed(2)}`}
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            </>)
+        }
+        else if (receiptState === "error1") // shopping cart is empty
+        {
+            return (<><p className="error">Shopping cart is empty. Please add items to cart.</p></>)
+        }
+        else if (receiptState === "error2") // Name and/or email is not filled out 
+        {
+            return (<><p className="error">Name and/or email is not filled out.</p></>)
+        }
+        else // default page
+        {
+            return (<div className="content">
+                <p>
+                    A confirmation email will be sent to you so that you can confirm
+                    this order. Once you have confirmed the order, it will
+                    be delivered to your dorm room.
+                </p>
+            </div>)
+        }
+    }
                                         
     return (<>
         <div className="checkout-form">
@@ -72,44 +120,9 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                     <i className="material-icons md-48">fact_check</i>
                 </span>
             </h3>
-            {receiptState ? 
-            <div className="card">
-                <header className="card-head">
-                    <h4 className="card-title">Receipt</h4>
-                </header>
-                <section className="card-body">
-                    <p className="header">{`Showing receipt for 
-                    ${checkoutForm.name} available at ${checkoutForm.email}:`}</p>
-                    <ul className="purchase">
-                        {shoppingCart.map((itemBought, idx) => (
-                        <li key={idx}>
-                            {`${itemBought.quantity} total ${findAndReturnName(itemBought.itemId)} purcahsed
-                                at a cost of $${findAndReturnUnitPrice(itemBought.itemId).toFixed(2)}
-                                for a total cost of $${(findAndReturnUnitPrice(itemBought.itemId) *  itemBought.quantity).toFixed(2)}.`}
-                        </li>
-                        ))}
-                        <li>
-                            {`Before taxes, the subtotal was $${calculateSubtotal().toFixed(2)}`}
-                        </li>
-                        <li>
-                            {`After taxes and fees were applied, the total comes out to $${(calculateTaxesAndFees() + calculateSubtotal()).toFixed(2)}`}
-                        </li>
-                    </ul>
-                </section>
-            </div> :
-            <div className="content">
-                <p>
-                    A confirmation email will be sent to you so that you can confirm
-                    this order. Once you have confirmed the order, it will
-                    be delivered to your dorm room.
-                </p>
-            </div>
-            }
-            
-            
+            {displayMessage()}
         </div>
-        </>
-             
+        </>   
     )
 }
 

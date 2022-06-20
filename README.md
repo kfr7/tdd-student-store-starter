@@ -143,7 +143,7 @@ The following specifications were met on the Express backend and the React front
     - [x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
     - [x] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
     - [x] It should store the `product` received by the request in state and then render the `ProductView` component.
-    - [ ] If no `product` is found with that `id`, it should render the `NotFound` component
+    - [x] If no `product` is found with that `id`, it should render the `NotFound` component
 
 **ProductView.jsx**
 
@@ -235,9 +235,9 @@ The following specifications were met on the Express backend and the React front
   - [x] Should render a `button` element with the `className` of `checkout-button`.
     - [x] It should contain the text `Checkout`.
     - [x] When clicked, it should call the `handleOnSubmit` function.
-      - [ ] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
-      - [ ] If the `POST` request is successful...
-        - [ ] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
+      - [x] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
+      - [x] If the `POST` request is successful...
+        - [x] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
         - [x] The `shoppingCart` should be emptied
         - [x] The `checkoutForm` should be reset to its default state.
 
@@ -257,13 +257,13 @@ The following specifications were met on the Express backend and the React front
   - [x] It should allow `POST` requests to the `/store` endpoint:
     - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
     - [ ] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
-      - [ ] The `shoppingCart` field should contain the user's order.
-        - [ ] This should be an array of objects.
-        - [ ] Each object in the array should have two fields:
+      - [x] The `shoppingCart` field should contain the user's order.
+        - [x] This should be an array of objects.
+        - [x] Each object in the array should have two fields:
           <!-- - [ ] The `item` field should store an object of the item being purchased -->
-          - [ ] The `itemId` field should store the `id` of the item being purchased
-          - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
-      - [ ] The `user` field should contain the name and email of the person placing the order.
+          - [x] The `itemId` field should store the `id` of the item being purchased
+          - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
+      - [x] The `user` field should contain the name and email of the person placing the order.
       - [ ] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
       - [ ] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
       - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
