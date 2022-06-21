@@ -10,7 +10,8 @@ export default function ShoppingCart ({ isOpen, products,
                                     shoppingCart,
                                     checkoutForm,
                                     handleOnCheckoutFormChange,
-                                    handleOnSubmitCheckoutForm, receiptState }) {
+                                    handleOnSubmitCheckoutForm, receiptState,
+                                    oldShoppingCart, oldCheckoutForm }) {
 
     const findAndReturnName = (productId) => {
         let itemName = ""
@@ -34,16 +35,16 @@ export default function ShoppingCart ({ isOpen, products,
         return itemPrice
     }
 
-    const calculateSubtotal = () => {
+    const calculateSubtotal = (someShoppingCart) => {
         let subtotal = 0;
-        shoppingCart.forEach(itemIdAndQ => {
+        someShoppingCart.forEach(itemIdAndQ => {
             subtotal += findAndReturnUnitPrice(itemIdAndQ.itemId) * itemIdAndQ.quantity;
         })
         return subtotal;
     }
 
-    const calculateTaxesAndFees = () => {
-        return 0.0875 * calculateSubtotal()
+    const calculateTaxesAndFees = (someShoppingCart) => {
+        return 0.0875 * calculateSubtotal(someShoppingCart)
     }
 
     return (
@@ -74,17 +75,17 @@ export default function ShoppingCart ({ isOpen, products,
                         <div className="receipt-subtotal">
                             <span className="label">Subtotal</span>
                             <span></span><span></span>
-                            <span className="center subtotal">{`$${calculateSubtotal().toFixed(2)}`}</span>
+                            <span className="center subtotal">{`$${calculateSubtotal(shoppingCart).toFixed(2)}`}</span>
                         </div>
                         <div className="receipt-taxes">
                             <span className="label">Taxes and Fees</span>
                             <span></span><span></span>
-                            <span className="center">{`$${calculateTaxesAndFees().toFixed(2)}`}</span>
+                            <span className="center">{`$${calculateTaxesAndFees(shoppingCart).toFixed(2)}`}</span>
                         </div>
                         <div className="receipt-total">
                             <span className="label">Total</span>
                             <span></span><span></span>
-                            <span className="center total-price">{`$${(calculateTaxesAndFees() + calculateSubtotal()).toFixed(2)}`}</span>
+                            <span className="center total-price">{`$${(calculateTaxesAndFees(shoppingCart) + calculateSubtotal(shoppingCart)).toFixed(2)}`}</span>
                         </div>
                     </div>
 
@@ -98,7 +99,9 @@ export default function ShoppingCart ({ isOpen, products,
                                 findAndReturnUnitPrice={findAndReturnUnitPrice}
                                 calculateSubtotal={calculateSubtotal}
                                 calculateTaxesAndFees={calculateTaxesAndFees}
-                                receiptState={receiptState}/>
+                                receiptState={receiptState}
+                                oldShoppingCart={oldShoppingCart} 
+                                oldCheckoutForm={oldCheckoutForm}/>
             </div>
         </div>
     )

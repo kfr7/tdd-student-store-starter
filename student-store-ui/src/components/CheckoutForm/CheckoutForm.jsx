@@ -9,11 +9,14 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                                         findAndReturnUnitPrice,
                                         calculateSubtotal,
                                         calculateTaxesAndFees,
-                                        receiptState }) {
+                                        receiptState,
+                                        oldShoppingCart, oldCheckoutForm }) {
     
+
     const displayMessage = () => {
         if (receiptState === "success")
         {   
+
             return (<><p className="success">Success!</p>
             <div className="card">
                 <header className="card-head">
@@ -21,20 +24,20 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                 </header>
                 <section className="card-body">
                     <p className="header">{`Showing receipt for 
-                    ${checkoutForm.name} available at ${checkoutForm.email}:`}</p>
+                    ${oldCheckoutForm.name} available at ${oldCheckoutForm.email}:`}</p>
                     <ul className="purchase">
-                        {shoppingCart.map((itemBought, idx) => (
+                        {oldShoppingCart.map((itemBought, idx) => (
                         <li key={idx}>
-                            {`${itemBought.quantity} total ${findAndReturnName(itemBought.itemId)} purcahsed
+                            {`${itemBought.quantity} total ${findAndReturnName(itemBought.itemId)} purchased
                                 at a cost of $${findAndReturnUnitPrice(itemBought.itemId).toFixed(2)}
                                 for a total cost of $${(findAndReturnUnitPrice(itemBought.itemId) *  itemBought.quantity).toFixed(2)}.`}
                         </li>
                         ))}
                         <li>
-                            {`Before taxes, the subtotal was $${calculateSubtotal().toFixed(2)}`}
+                            {`Before taxes, the subtotal was $${calculateSubtotal(oldShoppingCart).toFixed(2)}`}
                         </li>
                         <li>
-                            {`After taxes and fees were applied, the total comes out to $${(calculateTaxesAndFees() + calculateSubtotal()).toFixed(2)}`}
+                            {`After taxes and fees were applied, the total comes out to $${(calculateTaxesAndFees(oldShoppingCart) + calculateSubtotal(oldShoppingCart)).toFixed(2)}`}
                         </li>
                     </ul>
                 </section>

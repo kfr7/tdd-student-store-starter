@@ -4,7 +4,8 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart"
 
 export default function Sidebar({ isOpen, shoppingCart,
       products, checkoutForm, handleOnCheckoutFormChange,
-      handleOnSubmitCheckoutForm, handleOnToggle, receiptState }) {
+      handleOnSubmitCheckoutForm, handleOnToggle, receiptState,
+      oldShoppingCart, oldCheckoutForm }) {
   return (
     <section className={`sidebar ${isOpen ? "open" : "closed"}`}>
       <div className="wrapper">
@@ -18,7 +19,9 @@ export default function Sidebar({ isOpen, shoppingCart,
                     checkoutForm={checkoutForm}
                     handleOnCheckoutFormChange={handleOnCheckoutFormChange}
                     handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
-                    receiptState={receiptState}/>
+                    receiptState={receiptState}
+                    oldCheckoutForm={oldCheckoutForm}
+                    oldShoppingCart={oldShoppingCart}/>
     </section>
   )
 }

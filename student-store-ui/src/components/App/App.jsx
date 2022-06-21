@@ -18,9 +18,12 @@ export default function App() {
   // whether side bar is open or not
   const [isOpen, setIsOpen] = React.useState(false);
   // each object in shopping cart should have two fields: itemId, quantity
+
   const [shoppingCart, setShoppingCart] = React.useState([]);
+  const [oldShoppingCart, setOldShoppingCart] = React.useState([]);
   // look up what we need to send to the POST message
   const [checkoutForm, setCheckoutForm] = React.useState({name: "", email: ""});
+  const [oldCheckoutForm, setOldCheckoutForm] = React.useState({name: "", email: ""})
 
   const [categorySelected, setCategorySelected] = React.useState("All Categories")
   const [searchFieldValue, setSearchFieldValue] = React.useState("")
@@ -144,6 +147,8 @@ export default function App() {
     {user: {name: checkoutForm.name, email: checkoutForm.email}, shoppingCart: shoppingCart})
     .then((response) => {
       setReceiptState("success");
+      setOldShoppingCart(shoppingCart);
+      setOldCheckoutForm(checkoutForm);
       setShoppingCart([]);
       setCheckoutForm({name: "", email: ""})
       console.log(response);
@@ -167,6 +172,9 @@ export default function App() {
                     handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
                     handleOnToggle={handleOnToggle}
                     receiptState={receiptState}
+                    oldCheckoutForm={oldCheckoutForm}
+                    oldShoppingCart={oldShoppingCart}
+                  
                     />
           <Routes>
             <Route path="/" element={<Home  products={currentMerchandiseFromSearch} 
