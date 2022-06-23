@@ -1,8 +1,7 @@
 import * as React from "react"
 import "./ProductView.css"
 import ProductCard from "../ProductCard/ProductCard"
-import NotFound from "../NotFound/NotFound"
-import { Link } from "react-router-dom"
+
 
 export default function ProductView({ product, productId, quantity, handleAddItemToCart, handleRemoveItemToCart }) {
   // maybe make a state that is initialized with showDescription

@@ -1,9 +1,15 @@
+// NOTICE
+// DID NOT MAKE TWO DIFFERENT BRANCHES
+// EVERY EDIT MADE ON "MAIN"
+
 import * as React from "react"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import ProductDetail from "../ProductDetail/ProductDetail"
 import NotFound from "../NotFound/NotFound"
+import PurchaseGrid from "../PurchaseGrid/PurchaseGrid"
+import PurchaseDetail from "../PurchaseDetail/PurchaseDetail.jsx"
 import "./App.css"
 // Things I added below
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
@@ -13,6 +19,7 @@ import axios from "axios"
 export default function App() {
   // create all variable states needed
   const [products, setProducts] = React.useState([]);
+  const [purchases, setPurchases] = React.useState([])
   const [isFetching, setIsFetching] = React.useState(false);
   const [error, setError] = React.useState("");
   // whether side bar is open or not
@@ -49,13 +56,33 @@ export default function App() {
   })
 
   React.useEffect(() => {
+    setError("");
+    setIsFetching(true);
+    const fetchData = async () => {
+      try {
+        const data = await axios.get("http://localhost:3001/store/purchases")
+        setPurchases(data.data.purchases);        
+      }
+      catch (error)
+      {
+        console.error(error.message);
+        setError("Error Encountered");
+      }
+      setIsFetching(false);
+    }
+
+    fetchData();
+  }, [checkoutForm]);
+
+  React.useEffect(() => {
     // maybe remove line below
     setError("");
     setIsFetching(true);
 
     const fetchData = async () => {
       try {
-        const data = await axios.get("https://codepath-store-api.herokuapp.com/store")
+        // const data = await axios.get("https://codepath-store-api.herokuapp.com/store")
+        const data = await axios.get("http://localhost:3001/store")
         setProducts(data.data.products);        
       }
       catch (error)
@@ -98,7 +125,6 @@ export default function App() {
     })
     newArray.push(newObj)
     setShoppingCart(newArray);
-    console.log("After adding", newArray)
   }
   
   // haven't tested correctness of below function 
@@ -122,12 +148,10 @@ export default function App() {
       newArray.push(newObj)
     }
     setShoppingCart(newArray);
-    console.log("After removing", newArray)
   }
 
   // check what POST is supposed to have as params before confirming if right or not
   const handleOnCheckoutFormChange = (event) => {
-    console.log(event.target.name, event.target.value)
     setCheckoutForm({...checkoutForm, [event.target.name]: event.target.value});
   }
 
@@ -143,7 +167,8 @@ export default function App() {
       setReceiptState("error2")
       return
     }
-    axios.post("https://codepath-store-api.herokuapp.com/store",
+    // axios.post("https://codepath-store-api.herokuapp.com/store",
+    axios.post("http://localhost:3001/store",
     {user: {name: checkoutForm.name, email: checkoutForm.email}, shoppingCart: shoppingCart})
     .then((response) => {
       setReceiptState("success");
@@ -194,6 +219,20 @@ export default function App() {
                                                           isFetching={isFetching}
                                                           />}/>
               {/* should render ProductDetail component here as well (above) */}
+
+            <Route path="/purchases" element={<PurchaseGrid
+                                                purchases={purchases}
+                                                products={products}
+                                                />} />
+            <Route path="/purchases/:purchaseId" element={<PurchaseDetail
+                                                            purchases={purchases}
+                                                            setError={setError}
+                                                            setIsFetching={setIsFetching}
+                                                            error={error}
+                                                            isFetching={isFetching}
+                                                            products={products}
+                                                            />} />
+
             <Route path="*" element={<NotFound />}/>
               {/* should render NotFound component */}
           </Routes>

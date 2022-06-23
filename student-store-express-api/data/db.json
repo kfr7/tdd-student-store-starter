@@ -145,5 +145,274 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 1,
+      "name": "Kian",
+      "email": "kianranjbar7@gmail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-23T18:16:45.801Z"
+    },
+    {
+      "id": 2,
+      "name": "Amrithan",
+      "email": "boost@gmail.com",
+      "order": [
+        {
+          "itemId": 5,
+          "quantity": 20
+        },
+        {
+          "itemId": 16,
+          "quantity": 3
+        }
+      ],
+      "total": "3425.59",
+      "createdAt": "2022-06-23T18:17:50.760Z"
+    },
+    {
+      "id": 3,
+      "name": "TEST SSUI",
+      "email": "testssui@codepath.org",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        },
+        {
+          "itemId": 11,
+          "quantity": 2
+        }
+      ],
+      "total": "437.15",
+      "createdAt": "2022-06-23T18:27:16.084Z"
+    },
+    {
+      "id": 4,
+      "name": "second TEST",
+      "email": "diffEmail@me.com",
+      "order": [
+        {
+          "itemId": 16,
+          "quantity": 1
+        },
+        {
+          "itemId": 15,
+          "quantity": 1
+        },
+        {
+          "itemId": 14,
+          "quantity": 1
+        },
+        {
+          "itemId": 10,
+          "quantity": 1
+        },
+        {
+          "itemId": 11,
+          "quantity": 1
+        },
+        {
+          "itemId": 7,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 9
+        }
+      ],
+      "total": "1685.47",
+      "createdAt": "2022-06-23T18:28:15.562Z"
+    },
+    {
+      "id": 5,
+      "name": "New",
+      "email": "new@me.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createdAt": "2022-06-23T20:02:50.799Z"
+    },
+    {
+      "id": 6,
+      "name": "Kian",
+      "email": "kian@aslfjsal.com",
+      "order": [
+        {
+          "itemId": 7,
+          "quantity": 1
+        }
+      ],
+      "total": "5.43",
+      "createdAt": "2022-06-23T20:20:12.094Z"
+    },
+    {
+      "id": 7,
+      "name": "Shehab",
+      "email": "shehab@yahoo.com",
+      "order": [
+        {
+          "itemId": 7,
+          "quantity": 5
+        },
+        {
+          "itemId": 8,
+          "quantity": 6
+        },
+        {
+          "itemId": 11,
+          "quantity": 10
+        }
+      ],
+      "total": "2332.57",
+      "createdAt": "2022-06-23T20:20:39.016Z"
+    },
+    {
+      "id": 8,
+      "name": "Drip",
+      "email": "fashion@hello.com",
+      "order": [
+        {
+          "itemId": 6,
+          "quantity": 3
+        }
+      ],
+      "total": "65.22",
+      "createdAt": "2022-06-23T21:00:46.222Z"
+    },
+    {
+      "id": 9,
+      "name": "Food",
+      "email": "food@aol.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 3
+        }
+      ],
+      "total": "4.89",
+      "createdAt": "2022-06-23T21:02:10.465Z"
+    },
+    {
+      "id": 10,
+      "name": "Cristian",
+      "email": "godoy@gmail.com",
+      "order": [
+        {
+          "itemId": 11,
+          "quantity": 2
+        },
+        {
+          "itemId": 12,
+          "quantity": 1
+        },
+        {
+          "itemId": 9,
+          "quantity": 2
+        }
+      ],
+      "total": "880.84",
+      "createdAt": "2022-06-23T22:33:19.876Z"
+    },
+    {
+      "id": 11,
+      "name": "Haaland",
+      "email": "city@wack.com",
+      "order": [
+        {
+          "itemId": 8,
+          "quantity": 2
+        }
+      ],
+      "total": "43.48",
+      "createdAt": "2022-06-23T22:37:34.321Z"
+    },
+    {
+      "id": 12,
+      "name": "Someone Very Rich",
+      "email": "money@yahoo.com",
+      "order": [
+        {
+          "itemId": 16,
+          "quantity": 9
+        },
+        {
+          "itemId": 12,
+          "quantity": 9
+        },
+        {
+          "itemId": 11,
+          "quantity": 3
+        }
+      ],
+      "total": "14354.80",
+      "createdAt": "2022-06-23T22:39:39.453Z"
+    },
+    {
+      "id": 13,
+      "name": "Luxury",
+      "email": "moremoney@gmail.com",
+      "order": [
+        {
+          "itemId": 12,
+          "quantity": 1
+        }
+      ],
+      "total": "434.99",
+      "createdAt": "2022-06-23T22:42:08.640Z"
+    },
+    {
+      "id": 14,
+      "name": "more food",
+      "email": "food@gmail.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": "3.25",
+      "createdAt": "2022-06-23T22:42:47.087Z"
+    },
+    {
+      "id": 15,
+      "name": "coconut",
+      "email": "coco@coco.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        }
+      ],
+      "total": "3.53",
+      "createdAt": "2022-06-23T22:45:37.382Z"
+    },
+    {
+      "id": 16,
+      "name": "laksjfsl",
+      "email": "kian@gmailc.mo",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 2
+        },
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "7.58",
+      "createdAt": "2022-06-23T22:49:04.752Z"
+    }
+  ]
 }

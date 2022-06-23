@@ -2,10 +2,6 @@ import * as React from "react"
 import "./ShoppingCart.css"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
 
-//                                 checkoutForm={checkoutForm}
-//                                 handleOnCheckoutFormChange={handleOnCheckoutFormChange}
-//                                 handleOnSubmitCheckoutFormChange={handleOnSubmitCheckoutFormChange}
-//                                 // 
 export default function ShoppingCart ({ isOpen, products, 
                                     shoppingCart,
                                     checkoutForm,

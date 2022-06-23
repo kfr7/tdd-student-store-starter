@@ -3,7 +3,6 @@ import "./Home.css"
 import Hero from "../Hero/Hero"
 import ProductGrid from "../ProductGrid/ProductGrid"
 import SubNavbar from "../SubNavbar/SubNavbar"
-import axios from "axios"
 
 
 

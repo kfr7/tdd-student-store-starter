@@ -1,6 +1,7 @@
 import * as React from "react"
 import "./Sidebar.css"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
+import { Link } from "react-router-dom"
 
 export default function Sidebar({ isOpen, shoppingCart,
       products, checkoutForm, handleOnCheckoutFormChange,
@@ -22,6 +23,10 @@ export default function Sidebar({ isOpen, shoppingCart,
                     receiptState={receiptState}
                     oldCheckoutForm={oldCheckoutForm}
                     oldShoppingCart={oldShoppingCart}/>
+      {isOpen ? <Link to="/purchases">
+        <button className="previousOrders">See Previous Orders</button>
+      </Link> : null}
+      
     </section>
   )
 }

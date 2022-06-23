@@ -47,7 +47,8 @@ export default function ProductDetail({handleAddItemToCart,
     
         const fetchData = async () => {
           try {
-            const data = await axios.get(`https://codepath-store-api.herokuapp.com/store/${productId}`)
+            // const data = await axios.get(`https://codepath-store-api.herokuapp.com/store/${productId}`)
+            const data = await axios.get(`http://localhost:3001/store/${productId}`)
             setProduct(data.data.product);        
           }
           catch (error)

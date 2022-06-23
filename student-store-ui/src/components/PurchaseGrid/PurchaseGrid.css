@@ -1,0 +1,43 @@
+.purchase-grid {
+    width: 100%;
+    max-width: 100vw;
+    margin: 40px 0;
+}
+
+a, span, div, p, h1, h2, h3, h4, h5, h6, ul, ol {
+    margin: 0;
+    padding: 0;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    color: var(--font-dark);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.purchase-grid .content {
+    max-width: var(--content-width);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-grid .content h3 {
+    margin: 10px 0 30px;
+    font-size: 24px;
+    font-weight: 600;
+    display:block;
+    margin-block-start: 1em;
+}
+
+.purchase-grid .content .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+

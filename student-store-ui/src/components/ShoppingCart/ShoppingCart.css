@@ -4,7 +4,7 @@
 }
 
 .shopping-cart .closed {
-    visibility: hidden;
+    display: none;
 }
 
 .shopping-cart .open {
