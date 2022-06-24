@@ -22,7 +22,12 @@ export default function ProductCard({ purchase, enlarged, products }) {
               {!enlarged ? <p className="purchase-bag-amount">Different Items Bought: {purchase.order.length}</p> : null}
               <p className="purchase-total">Total Cost with Taxes+Fees: ${purchase.total}</p>
               <p className="purchase-createdAt">When: {purchase.createdAt}</p>
-              {purchase.order.map((orderIdAndQ, idx) => (
+            </div>
+          </div>
+      </div>
+    </Link>
+    { enlarged? <h4 className="belowCard">Items purchased...</h4> : null }
+    {purchase.order.map((orderIdAndQ, idx) => (
         // think I will need to pass down products to do this
         <ProductCardPurchased key={idx} 
                               orderIdAndQ={orderIdAndQ} 
@@ -31,12 +36,7 @@ export default function ProductCard({ purchase, enlarged, products }) {
                               />
       )
       )}
-      {enlarged ? <p id="footer">Taxes and Fees not shown in itemized purchase details.</p> : null}
-            </div>
-          </div>
-      </div>
-    </Link>
-    
+      {enlarged ? <p className="belowCard" id="footer">Taxes and Fees not shown in itemized purchase details.</p> : null}
     </>
   )
 }

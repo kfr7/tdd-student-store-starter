@@ -181,6 +181,172 @@
         "body": "Matching Rings: 2 bought @ $200.00 for a total cost of $435.00 including taxes + fees.\n",
         "conclusion": "Total after taxes + fees: $435\nThank you for your order! See you next time."
       }
+    },
+    {
+      "id": 3,
+      "name": "Buyer",
+      "email": "justcoco@yahoo.org",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        }
+      ],
+      "total": "3.53",
+      "createdAt": "2022-06-24T16:54:06.078Z",
+      "receipt": {
+        "title": "Showing receipt for Buyer available at justcoco@yahoo.org:",
+        "body": "Coconut Water: 1 bought @ $3.25 for a total cost of $3.53 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $3.534375\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 4,
+      "name": "rich person",
+      "email": "everything@gmail.org",
+      "order": [
+        {
+          "itemId": 16,
+          "quantity": 14
+        },
+        {
+          "itemId": 15,
+          "quantity": 7
+        },
+        {
+          "itemId": 14,
+          "quantity": 4
+        },
+        {
+          "itemId": 13,
+          "quantity": 1
+        },
+        {
+          "itemId": 9,
+          "quantity": 1
+        },
+        {
+          "itemId": 10,
+          "quantity": 1
+        },
+        {
+          "itemId": 11,
+          "quantity": 1
+        },
+        {
+          "itemId": 12,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 1
+        },
+        {
+          "itemId": 7,
+          "quantity": 1
+        },
+        {
+          "itemId": 6,
+          "quantity": 1
+        },
+        {
+          "itemId": 5,
+          "quantity": 1
+        },
+        {
+          "itemId": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        }
+      ],
+      "total": "16694.09",
+      "createdAt": "2022-06-24T16:55:02.055Z",
+      "receipt": {
+        "title": "Showing receipt for rich person available at everything@gmail.org:",
+        "body": "Smart Glasses: 14 bought @ $999.99 for a total cost of $15224.85 including taxes + fees.\nMouse from 1998: 7 bought @ $19.98 for a total cost of $152.10 including taxes + fees.\nKeyboard: 4 bought @ $110.00 for a total cost of $478.50 including taxes + fees.\nCopper Bracelet: 1 bought @ $70.00 for a total cost of $76.13 including taxes + fees.\nPullover Sweater: 1 bought @ $4.99 for a total cost of $5.43 including taxes + fees.\nAlpaca Wool Scarf: 1 bought @ $34.99 for a total cost of $38.05 including taxes + fees.\nMatching Rings: 1 bought @ $200.00 for a total cost of $217.50 including taxes + fees.\nApple Watch: 1 bought @ $399.99 for a total cost of $434.99 including taxes + fees.\nKnitted Beanie: 1 bought @ $19.99 for a total cost of $21.74 including taxes + fees.\nStriped Socks: 1 bought @ $4.99 for a total cost of $5.43 including taxes + fees.\nBar Code Shirts: 1 bought @ $19.99 for a total cost of $21.74 including taxes + fees.\nFruit Medley: 1 bought @ $7.50 for a total cost of $8.16 including taxes + fees.\nRice Krispies: 1 bought @ $0.99 for a total cost of $1.08 including taxes + fees.\nFlamin Hot Cheetos: 1 bought @ $1.50 for a total cost of $1.63 including taxes + fees.\nCinnamon Rolls: 1 bought @ $2.99 for a total cost of $3.25 including taxes + fees.\nCoconut Water: 1 bought @ $3.25 for a total cost of $3.53 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $16694.092875000002\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 5,
+      "name": "kian",
+      "email": "some@gmail.com",
+      "order": [
+        {
+          "itemId": 12,
+          "quantity": 2
+        },
+        {
+          "itemId": 13,
+          "quantity": 1
+        }
+      ],
+      "total": "946.10",
+      "createdAt": "2022-06-24T17:03:04.486Z",
+      "receipt": {
+        "title": "Showing receipt for kian available at some@gmail.com:",
+        "body": "Apple Watch: 2 bought @ $399.99 for a total cost of $869.98 including taxes + fees.\nCopper Bracelet: 1 bought @ $70.00 for a total cost of $76.13 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $946.10325\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 6,
+      "name": "example",
+      "email": "example@gmail.com",
+      "order": [
+        {
+          "itemId": 8,
+          "quantity": 2
+        },
+        {
+          "itemId": 9,
+          "quantity": 1
+        },
+        {
+          "itemId": 12,
+          "quantity": 1
+        }
+      ],
+      "total": "483.89",
+      "createdAt": "2022-06-24T17:04:05.232Z",
+      "receipt": {
+        "title": "Showing receipt for example available at example@gmail.com:",
+        "body": "Knitted Beanie: 2 bought @ $19.99 for a total cost of $43.48 including taxes + fees.\nPullover Sweater: 1 bought @ $4.99 for a total cost of $5.43 including taxes + fees.\nApple Watch: 1 bought @ $399.99 for a total cost of $434.99 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $483.894\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 7,
+      "name": "example",
+      "email": "myemail@gmail.com",
+      "order": [
+        {
+          "itemId": 12,
+          "quantity": 2
+        },
+        {
+          "itemId": 7,
+          "quantity": 3
+        }
+      ],
+      "total": "886.26",
+      "createdAt": "2022-06-24T17:14:50.299Z",
+      "receipt": {
+        "title": "Showing receipt for example available at myemail@gmail.com:",
+        "body": "Apple Watch: 2 bought @ $399.99 for a total cost of $869.98 including taxes + fees.\nStriped Socks: 3 bought @ $4.99 for a total cost of $16.28 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $886.258125\nThank you for your order! See you next time."
+      }
     }
   ]
 }

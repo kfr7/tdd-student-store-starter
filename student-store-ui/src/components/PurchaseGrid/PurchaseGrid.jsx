@@ -1,7 +1,6 @@
 import * as React from "react"
 import "./PurchaseGrid.css"
 import PurchaseCard from "../PurchaseCard/PurchaseCard"
-import axios from "axios"
 
 export default function PurchaseGrid( { purchases, products } ) {
 
@@ -12,7 +11,6 @@ export default function PurchaseGrid( { purchases, products } ) {
 
     const filteredPurchases = purchases.filter((purchase) => {
         try{
-            console.log(purchase.email)
             if (purchase.email.toLowerCase().match(emailSearchValue) !== null)
             {
               return true

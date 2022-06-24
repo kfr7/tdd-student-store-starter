@@ -10,7 +10,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 ### WEEK 3 (Frontend+BackEnd=COMPLETE) Walkthrough Video
 
-![]()
+![](https://media1.giphy.com/media/Cinb5q1UznuM37CFdi/giphy.gif?cid=790b7611ef2d511d72ea863cd1ed8faf0173fedf789ddf02&rid=giphy.gif&ct=g)
 
 ### WEEK 2 (just Frontend) Walkthrough Video
 
