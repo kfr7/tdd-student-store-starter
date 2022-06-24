@@ -104,7 +104,6 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                     </label>
                 </div>
             </div>
-            <p className="is-danger" />
             <div className="field">
                 <div className="control">
                     <button onClick={handleOnSubmitCheckoutForm}

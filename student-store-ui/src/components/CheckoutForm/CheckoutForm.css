@@ -107,13 +107,6 @@ input {
     color: #0096FF;
 }
 
-.checkout-form .is-danger {
-    color: var(--bright-red);
-}
-.is-danger {
-    color: var(--bright-red);
-}
-
 .checkout-form button {
     margin-top: 10px;
     padding: 12px 18px;
