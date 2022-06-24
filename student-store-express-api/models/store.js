@@ -44,10 +44,12 @@ class Store {
         }
       })
 
-      let totalMoneySpent = 0
-      let oneItemTotal = 0
-      let oneItemTax = 0
+      let totalMoneySpent = 0;
+      let oneItemTotal = 0;
+      let oneItemTax = 0;
       let productIdsInShoppingCart = new Set();
+      let receipt = {title: "", body: "", conclusion: ""}
+      receipt.title = `Showing receipt for ${user.name} available at ${user.email}:`;
 
       const shoppingCartItemRequiredFields = ["itemId", "quantity"]
       shoppingCart.forEach((productObject) => {
@@ -56,10 +58,12 @@ class Store {
             throw new BadRequestError(`Field: ${field} is required in every object in shoppingCart`)
           }
         })
+        let tempProductInfo = Store.getProductById(productObject.itemId)
         productIdsInShoppingCart.add(productObject.itemId)
-        oneItemTotal = productObject.quantity * Store.getProductById(productObject.itemId).price
+        oneItemTotal = productObject.quantity * tempProductInfo.price
         oneItemTax = oneItemTotal * 0.0875
         totalMoneySpent += oneItemTotal + oneItemTax
+        receipt.body += `${tempProductInfo.name}: ${productObject.quantity} bought @ $${tempProductInfo.price.toFixed(2)} for a total cost of $${(oneItemTotal + oneItemTax).toFixed(2)} including taxes + fees.\n`
       })
 
       if (productIdsInShoppingCart.size !== shoppingCart.length)
@@ -67,7 +71,8 @@ class Store {
         // duplicates found
         throw new BadRequestError(`Duplicates found in shopping cart`)
       }
-      
+      receipt.conclusion = `Total after taxes + fees: $${totalMoneySpent}\nThank you for your order! See you next time.`
+
       const purchaseId = storage.get("purchases").value().length + 1
       const createdAt = new Date().toISOString()
   
@@ -76,7 +81,8 @@ class Store {
                             email: user.email,
                             order: shoppingCart,
                             total: totalMoneySpent.toFixed(2),
-                            createdAt: createdAt.toString()  }
+                            createdAt: createdAt.toString(),
+                            receipt: receipt  }
   
       storage.get("purchases").push(newPurchase).write()
   

@@ -37,7 +37,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User sees a "not found" display when searching for a nonexistent product.
 - [x] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [x] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
-- [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
+- [x] Allow users to use an input to filter orders by the email of the person who placed the order.
 
 ### Passing Automated Tests
 
@@ -286,7 +286,7 @@ The following specifications were met on the Express backend and the React front
           - [x] `total` - the calculated total of the order
           - [x] `createdAt` - a string representation of the date and time when the order was placed
         - **optional**:
-          - [ ] `receipt` - text describing the order (what might go on a receipt)
+          - [x] `receipt` - text describing the order (what might go on a receipt)
       - [x] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 ---
 
@@ -294,17 +294,26 @@ The following specifications were met on the Express backend and the React front
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
+Week 2 Response...
 The labs did prepare me to a certain extent in knowing how to use useState
 and how props get passed through components. However, what I was not prepared for
 and had to learn myself was the BrowserRouter, Routes, Route, and Link components. Although I now got it to work, there are still some parts I am not sure how to implement such as going to a specific fragment of the url using a Link component. I got it to work with an anchor tag but not Link. Also, not using axios or useEffect was another thing I had to learn on my own.
+Week 3 Response...
+Yes, this week I did feel absolutely prepared with the labs that we worked with beforehand. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
+
+Week 2 Response...
 I would have made it look more uniform without so many different boxes on the screen. Also, I would have watched more youtube videos on how advanced React works since I was having trouble sometimes.
+Week 3 Response...
+If I had more time, I would love to make my website look more professional as well as create more buttons/functionality to get where you need to go in less clicks. I felt very prepared to do the back end and I now felt comfortable with the front end.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
+Week 2 Response...
 I think I did well in my project demo, perhaps I can answer the questions while I show my demo though. Maybe I can show more expression too on what parts I was proud of.
+Week 3 Response...
+I think I did well as I implemented many search features and went through them at a good pace to show to everyone.
 
 ### Open-source libraries used
 
@@ -312,4 +321,7 @@ I think I did well in my project demo, perhaps I can answer the questions while 
 
 ### Shout out
 
+Week 2 Shout Out...
 I'd like to credit Abdullah and Duy since we all were working on the project at relatively the same pace so if one of us got stumped on a particular part, we usually resolved the issue pretty fast and got back on stable ground. 
+Week 3 Shout Out...
+This week I'd like to shout out Jose since he helped me out and was a great podmate.
