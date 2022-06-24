@@ -173,6 +173,7 @@ checkout-success .purchase {
 
 .checkout-success .purchase li {
     color: #fff;
+    margin-left: 20px;
 }
 
 a, span, div, p, h1, h2, h3, h4, h5, h6, ul, ol {

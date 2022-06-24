@@ -347,6 +347,102 @@
         "body": "Apple Watch: 2 bought @ $399.99 for a total cost of $869.98 including taxes + fees.\nStriped Socks: 3 bought @ $4.99 for a total cost of $16.28 including taxes + fees.\n",
         "conclusion": "Total after taxes + fees: $886.258125\nThank you for your order! See you next time."
       }
+    },
+    {
+      "id": 8,
+      "name": "one treat",
+      "email": "1oneam@boost.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createdAt": "2022-06-24T17:35:47.015Z",
+      "receipt": {
+        "title": "Showing receipt for one treat available at 1oneam@boost.com:",
+        "body": "Rice Krispies: 1 bought @ $0.99 for a total cost of $1.08 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $1.076625\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 9,
+      "name": "example name",
+      "email": "somerandomemail@yahoo.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 3
+        },
+        {
+          "itemId": 3,
+          "quantity": 3
+        },
+        {
+          "itemId": 12,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 2
+        }
+      ],
+      "total": "491.45",
+      "createdAt": "2022-06-24T17:39:40.606Z",
+      "receipt": {
+        "title": "Showing receipt for example name available at somerandomemail@yahoo.com:",
+        "body": "Rice Krispies: 3 bought @ $0.99 for a total cost of $3.23 including taxes + fees.\nCinnamon Rolls: 3 bought @ $2.99 for a total cost of $9.75 including taxes + fees.\nApple Watch: 1 bought @ $399.99 for a total cost of $434.99 including taxes + fees.\nKnitted Beanie: 2 bought @ $19.99 for a total cost of $43.48 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $491.452125\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 10,
+      "name": "example name again",
+      "email": "randomemail@gmail.com",
+      "order": [
+        {
+          "itemId": 8,
+          "quantity": 1
+        },
+        {
+          "itemId": 15,
+          "quantity": 2
+        },
+        {
+          "itemId": 16,
+          "quantity": 1
+        }
+      ],
+      "total": "1152.68",
+      "createdAt": "2022-06-24T17:42:16.512Z",
+      "receipt": {
+        "title": "Showing receipt for example name again available at randomemail@gmail.com:",
+        "body": "Knitted Beanie: 1 bought @ $19.99 for a total cost of $21.74 including taxes + fees.\nMouse from 1998: 2 bought @ $19.98 for a total cost of $43.46 including taxes + fees.\nSmart Glasses: 1 bought @ $999.99 for a total cost of $1087.49 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $1152.6847500000001\nThank you for your order! See you next time."
+      }
+    },
+    {
+      "id": 11,
+      "name": "kian ranjbar",
+      "email": "kianranjbar@me.com",
+      "order": [
+        {
+          "itemId": 12,
+          "quantity": 2
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "871.61",
+      "createdAt": "2022-06-24T17:47:13.524Z",
+      "receipt": {
+        "title": "Showing receipt for kian ranjbar available at kianranjbar@me.com:",
+        "body": "Apple Watch: 2 bought @ $399.99 for a total cost of $869.98 including taxes + fees.\nFlamin Hot Cheetos: 1 bought @ $1.50 for a total cost of $1.63 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $871.6095\nThank you for your order! See you next time."
+      }
     }
   ]
 }
