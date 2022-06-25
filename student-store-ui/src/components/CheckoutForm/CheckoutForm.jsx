@@ -78,7 +78,7 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                     <input name="name"
                     className="checkout-form-input"
                     type="text" placeholder="Student Name"
-                    onChange={handleOnCheckoutFormChange }
+                    onChange={(ev) => handleOnCheckoutFormChange(ev.target.name, ev.target.value) }
                     />
                 </div>
             </div>
@@ -89,7 +89,8 @@ export default function CheckoutForm ({ isOpen, shoppingCart,
                     className="checkout-form-input"
                     type="email"
                     placeholder="student@codepath.org"
-                    onChange={handleOnCheckoutFormChange} />
+                    onChange={(ev) => handleOnCheckoutFormChange(ev.target.name, ev.target.value) }
+                    />
                 </div>
             </div>
             <div className="field">

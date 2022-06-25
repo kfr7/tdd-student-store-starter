@@ -501,6 +501,28 @@
         "body": "Matching Rings: 1 bought @ $200.00 for a total cost of $217.50 including taxes + fees.\n",
         "conclusion": "Total after taxes + fees: $217.5\nThank you for your order! See you next time."
       }
+    },
+    {
+      "id": 15,
+      "name": "testing changing parameters for changecheckout",
+      "email": "testing@gmail.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": "4.88",
+      "createdAt": "2022-06-25T00:09:58.434Z",
+      "receipt": {
+        "title": "Showing receipt for testing changing parameters for changecheckout available at testing@gmail.com:",
+        "body": "Flamin Hot Cheetos: 1 bought @ $1.50 for a total cost of $1.63 including taxes + fees.\nCinnamon Rolls: 1 bought @ $2.99 for a total cost of $3.25 including taxes + fees.\n",
+        "conclusion": "Total after taxes + fees: $4.882875\nThank you for your order! See you next time."
+      }
     }
   ]
 }

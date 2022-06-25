@@ -151,8 +151,8 @@ export default function App() {
   }
 
   // check what POST is supposed to have as params before confirming if right or not
-  const handleOnCheckoutFormChange = (event) => {
-    setCheckoutForm({...checkoutForm, [event.target.name]: event.target.value});
+  const handleOnCheckoutFormChange = (n, v) => {
+    setCheckoutForm({...checkoutForm, [n]: v});
   }
 
   // test alongside with above function
